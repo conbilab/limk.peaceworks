@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: theme("colors.background");
+    color: theme("colors.ink");
+    font-family: theme("fontFamily.sans");
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* 아이보리 배경에 아주 옅은 네이비/블루 그라데이션 (PRD 10) */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+      radial-gradient(
+        60% 40% at 50% 0%,
+        rgba(234, 242, 255, 0.55) 0%,
+        rgba(247, 244, 239, 0) 70%
+      ),
+      theme("colors.background");
+  }
+
+  /* 키보드 포커스 접근성 (마우스 클릭 시엔 표시 안 함) */
+  :focus-visible {
+    outline: none;
+  }
+}
+
+/* 모션 최소화 선호 사용자 배려 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

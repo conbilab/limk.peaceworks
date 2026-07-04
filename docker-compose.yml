@@ -1,0 +1,14 @@
+services:
+  peaceworks-link:
+    build:
+      context: .
+      args:
+        # .env 값을 빌드에 주입 (NEXT_PUBLIC_* 는 빌드타임 인라인)
+        NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-https://example.com}
+        NEXT_PUBLIC_GA_ID: ${NEXT_PUBLIC_GA_ID:-}
+    image: peaceworks-link:latest
+    container_name: peaceworks-link
+    restart: unless-stopped
+    # 호스트 3400 → 컨테이너 80 (3100은 '한자리'가 사용 중이므로 피함)
+    ports:
+      - "127.0.0.1:3400:80"

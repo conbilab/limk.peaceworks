@@ -1,0 +1,25 @@
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+
+# env
+.env
+.env.local
+.env*.local
+
+# vercel
+.vercel
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*
+next-env.d.ts
+tsconfig.tsbuildinfo
+
+# 로컬 원본(영문 파일과 중복) — 저장소 제외
+/public/images/조피스 프로필사진.webp
+/public/images/피스웍스 로고.png
