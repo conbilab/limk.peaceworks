@@ -31,18 +31,22 @@ export default function ProfileHero() {
       <h1 className="text-lg font-bold text-navy">{hero.name}</h1>
       <p className="mt-1 text-sm text-muted">{hero.role}</p>
 
-      {/* 헤드라인 (두 줄) */}
-      <h2 className="mt-5 text-[26px] font-bold leading-[1.28] text-navy">
+      {/* 헤드라인 (두 줄) — break-keep: 한글 단어 중간 줄바꿈 방지 */}
+      <h2 className="mt-5 text-balance text-[26px] font-bold leading-[1.28] text-navy">
         {hero.headline.map((line, i) => (
-          <span key={i} className="block">
+          <span key={i} className="block break-keep">
             {line}
           </span>
         ))}
       </h2>
 
-      <p className="mt-4 text-[15px] leading-[1.65] text-ink">{hero.body}</p>
+      <p className="mx-auto mt-4 max-w-[22rem] text-balance break-keep text-[15px] leading-[1.65] text-ink">
+        {hero.body}
+      </p>
 
-      <p className="mt-3 text-[14px] leading-[1.6] text-muted">{hero.belief}</p>
+      <p className="mx-auto mt-3 max-w-[22rem] text-balance break-keep text-[14px] leading-[1.6] text-muted">
+        {hero.belief}
+      </p>
     </header>
   );
 }
