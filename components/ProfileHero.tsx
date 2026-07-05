@@ -5,18 +5,6 @@ import { hero } from "@/data/content";
 export default function ProfileHero() {
   return (
     <header className="flex flex-col items-center text-center animate-fade-up">
-      {/* 로고: 워드마크+태그라인이 포함된 전체 락업이라 흰 배경 타일에 담아 크게 표시 */}
-      <div className="mb-5 w-full max-w-[240px] overflow-hidden rounded-3xl bg-white p-4 shadow-sm ring-1 ring-line">
-        <Image
-          src={hero.logoSrc}
-          alt={hero.logoAlt}
-          width={240}
-          height={240}
-          priority
-          className="h-auto w-full object-contain"
-        />
-      </div>
-
       {/* 프로필: 원형 84~96px */}
       <div className="mb-3 h-[92px] w-[92px] overflow-hidden rounded-full border border-line bg-surface">
         <Image
@@ -24,6 +12,7 @@ export default function ProfileHero() {
           alt={hero.profileAlt}
           width={92}
           height={92}
+          priority
           className="h-full w-full object-cover"
         />
       </div>

@@ -26,8 +26,8 @@ export interface LinkItem {
 export const links: LinkItem[] = [
   {
     id: "meeting",
-    title: "모임 참여하기",
-    description: "함께 배우고 실행하는 콘텐츠 마케팅 모임",
+    title: "조피스의 아이디어 테이블",
+    description: "신청하기",
     href: "https://jopeace-ideatable.vercel.app",
     primary: true,
     event: "click_meeting",
