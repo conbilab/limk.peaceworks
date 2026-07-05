@@ -1,7 +1,10 @@
 // 화면 카피/브랜드 콘텐츠 (PRD 7, 11, 14 기준). 문구 수정은 이 파일에서만.
 
 export const siteConfig = {
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com",
+  // 검색엔진/OG 메타의 기준 절대 URL. 커스텀 도메인 연결 시 이 기본값만 바꾸면 됨.
+  siteUrl:
+    process.env.NEXT_PUBLIC_SITE_URL ??
+    "https://link-peaceworks.jopd-prod.workers.dev",
   gaId: process.env.NEXT_PUBLIC_GA_ID ?? "",
   brand: "PEACEWORKS",
   seoTitle: "PEACEWORKS · 조피스 — 콘텐츠 마케팅",
