@@ -1,7 +1,7 @@
 {
   // Cloudflare Workers 정적 자산 배포 설정 (Next.js static export → out/)
   // 빌드: npm run build (out/ 생성) → 배포: npx wrangler deploy
-  "name": "limk-peaceworks",
+  "name": "link-peaceworks",
   "compatibility_date": "2025-06-01",
   "assets": {
     // 정적 결과물 폴더 (next.config.mjs 의 output:"export" 산출물)
