@@ -20,9 +20,13 @@ export default function ImpactCard() {
         {impactCard.title}
       </h3>
 
-      <div className="mt-2 space-y-1">
+      <div className="mt-2 space-y-1.5">
         {impactCard.body.map((line, i) => (
-          <p key={i} className="text-[14px] leading-[1.65] text-muted">
+          <p
+            key={i}
+            // break-keep: 한글 단어 중간 줄바꿈 방지 / text-balance: 줄 길이 균형(외톨이 단어 방지)
+            className="mx-auto max-w-[19rem] text-balance break-keep text-[14px] leading-[1.7] text-muted"
+          >
             {line}
           </p>
         ))}
